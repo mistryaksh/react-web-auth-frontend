@@ -29,30 +29,36 @@ function App() {
 
      return (
           <div className="container">
-               <div style={{ width: "40%", padding: 10, margin: "auto" }}>
-                    <input
-                         type="email"
-                         value={email}
-                         onChange={(e) => setEmail(e.target.value)}
-                         name="email"
-                         placeholder="Enter email address"
-                    />
-                    <br />
-                    <br />
-                    <input
-                         type="password"
-                         value={password}
-                         onChange={(e) => setPassword(e.target.value)}
-                         name="password"
-                         placeholder="Enter your password"
-                    />
-                    <br />
-                    <br />
-                    <p className="success">{success && success}</p>
-                    <p className="error">{error && error}</p>
-                    <button onClick={sendingLoginRequest} type="submit">
-                         Login
-                    </button>
+               <div style={{ width: "40%", borderRadius: "5px", padding: "20px", background: "#d0d0d0" }}>
+                    <div>
+                         <label htmlFor="email">Email :</label>
+                         <input
+                              type="email"
+                              placeholder="Enter your email address"
+                              style={{ width: "100%" }}
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                         />
+                    </div>
+                    <div className="mt-10">
+                         <label htmlFor="password">Password :</label>
+                         <input
+                              type="password"
+                              placeholder="Enter your password"
+                              style={{ width: "100%" }}
+                              value={password}
+                              onChange={(e) => setPassword(e.target.value)}
+                         />
+                    </div>
+                    <div className="mt-10">
+                         {error && <p className="error">{error}</p>}
+                         {success && <p className="success">{success}</p>}
+                    </div>
+                    <div className="mt-10">
+                         <button type="submit" onClick={sendingLoginRequest}>
+                              Submit
+                         </button>
+                    </div>
                </div>
           </div>
      );

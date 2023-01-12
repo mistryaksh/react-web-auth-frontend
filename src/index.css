@@ -12,11 +12,13 @@ code {
     monospace;
 }
 
+
 input{
-     width:100%;
+     margin-top: 5px;
+     width: max-content;
      border:1px solid #6366f1;
-     border-radius: 3px;
-     padding:10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
      outline: none;
 }
 
@@ -36,8 +38,11 @@ input:focus{
 button{
      background-color: #6366f1;
      border:none;
-     width: 100%;
-     padding:10px;
+     width: max-content;
+     padding-top:10px;
+     padding-bottom:10px;
+     padding-left: 20px;
+     padding-right: 20px;
      border-radius: 5px;
      font-size: 16px;
      color:#fff
@@ -49,4 +54,8 @@ button{
 
 .error{
      color:#ef4444
+}
+
+.mt-10{
+     margin-top: 10px;
 }
