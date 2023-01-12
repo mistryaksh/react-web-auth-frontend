@@ -12,7 +12,7 @@ function App() {
           try {
                console.log("data", { email, password });
                const userCredentials = { email, password };
-               const data = await axios.post("http://13.234.21.54:8080/", userCredentials);
+               const data = await axios.post("https://13.234.21.54:8080/", userCredentials);
                setSuccess(data.data.message);
                setError("");
                return data.data;
