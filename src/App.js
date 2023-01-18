@@ -11,7 +11,7 @@ function App() {
      const sendingLoginRequest = async () => {
           try {
                const userCredentials = { email, password };
-               const data = await axios.post("http://65.1.112.133:8080/", userCredentials);
+               const data = await axios.post("https://65.1.112.133:8080/", userCredentials);
                setSuccess(data.data.message);
                setError("");
                console.log(data.data);
